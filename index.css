@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    background: url('assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.hero-text-text{
+    width: 700px;
+    height: 100px;
+}
+
+@layer base {
+    @font-face {
+      font-family: "typoround";
+      src: url(/assets/Typo_Round_Bold_Demo.otf);
+    }
+}

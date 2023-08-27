@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>DS Creative</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              },
+              fontFamily :{
+                typoround: ["typoround"],
+            }
+          }
+        }
+    }
+      </script>
+</head>
+<body>
+    <div class="nav flex justify-end space-x-10 text-xl px-6 text-slate-50">
+        <div class="font-typoround"> Home </div>
+        <div class="font-typoround"> Showreel </div>
+        <div class="font-typoround"> Contact </div>
+        <div class="font-typoround"> About Us </div>
+        <div class="mx-4 font-typoround"> Promotion </div>
+    </div>
+
+    <div class="hero flex mt-6" id="hero">
+        <div class="hero-text text-slate-50 flex flex-col justify-center">
+            <div class="flex justify-center mb-4">
+                <img class="logo" src="assets/ds-creatives-high-resolution-logo-color-on-transparent-background.png" width="200" height="200" alt="Logo" />
+            </div>
+
+            <div>
+              <p class="hero-text-text pl-24 pr-6">
+                Welcome to DS Creative, a video editing freelancing company
+                founded by Mr. Soumyadip Saha and Mr. Debojyoti Saha. 
+                We are passionate about transforming your vision into captivating visuals.
+                Let us bring your stories to life through the art of video editing.
+                Together, we will create magic!
+              </p>
+            </div>
+
+            <div class="flex justify-center mt-4">
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                Contact Us
+              </button>
+            </div>
+
+        </div>
+
+        <div>
+            <img class="hero-image" src="assets/Rocket Illustration.png" width="700" height="700" alt="Image Rocket" />
+        </div>
+    </div>
+    
+</body>
+</html>
