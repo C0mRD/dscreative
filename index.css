@@ -8,10 +8,10 @@ body{
     background-size: cover;
 }
 
-.hero-text-text{
+/* .hero-text-text{
     width: 700px;
     height: 100px;
-}
+} */
 
 @layer base {
     @font-face {
