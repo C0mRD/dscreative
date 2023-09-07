@@ -1,72 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>DS Creative</title>
-    <link rel="stylesheet" href="index.css">
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              },
-              fontFamily :{
-                typoround: ["typoround"],
-                typewritter: ["typewritter"],
-                cinzel: ["cinzel"],
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    clifford: '#da373d',
+                  },
+                  fontFamily :{
+                    typoround: ["typoround"],
+                    typewritter: ["typewritter"],
+                    cinzel: ["cinzel"],
+                }
+              }
             }
-          }
         }
-    }
-      </script>
-</head>
-<body>
-    <div class="nav flex justify-end space-x-4 text-lg px-1 text-slate-50 sm:space-x-10 sm:px-6 mt-3">
-        <a class="font-typoround bg-blue-500 rounded-full w-20 text-center" href="#hero"> Home</a>
-        <a class="font-typoround hover:bg-blue-500 hover:rounded-full hover:w-24 hover:text-center" href="showreel.html"> Showreel </a>
-        <a class="font-typoround hover:bg-blue-500 hover:rounded-full hover:w-20 hover:text-center" href="about.html"> About Us </a>
-        <a class="font-typoround hover:bg-blue-500 hover:rounded-full hover:w-20 hover:text-center" href="contact.html"> Contact </a>
-        <a class="font-typoround hover:bg-blue-500 hover:rounded-full hover:w-20 hover:text-center" href="review.html"> Review </a>
-        <a class="mx-4 font-typoround hover:bg-blue-500 hover:rounded-full hover:w-24 hover:text-center" href="promotion.html"> Promotion </a>
-    </div>
+          </script>
+    
 
-    <div class="hero flex mt-6" id="hero">
-        <div class="hero-text text-slate-50 flex flex-col justify-center w-full">
-            <div class="flex justify-center mb-4">
-                <img class="logo" src="assets/ds-creatives-high-resolution-logo-color-on-transparent-background.png" width="200" height="200" alt="Logo" />
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>DS Creative</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">
+                        <img class="logo" src="assets/img/ds-creatives-high-resolution-logo-color-on-transparent-background.png" width="100" height="100" alt="Logo" />
+                        DS Creative
+                    </a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active font-typoround text-lg">Home</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link font-typoround text-lg">Showreel</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link font-typoround text-lg">About</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link font-typoround text-lg">Contact</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link font-typoround text-lg">Review</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title font-cinzel"> DS <span class="home__title-color">Creative</span></h1>
+                    <p class="hero-text font-typewritter text-lg">
+                        Welcome to DS Creative, a video editing freelancing company
+                        founded by Mr. Soumyadip Saha and Mr. Debojyoti Saha. 
+                        We are passionate about transforming your vision into captivating visuals.
+                        Let us bring your stories to life through the art of video editing.
+                        Together, we will create magic!
+        
+                    </p>
+
+                    <a href="#" class="button font-typoround">Contact Us</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="https://instagram.com/ds_creatives_2002" class="home__social-icon"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://wa.me/8420802013"" class="home__social-icon"><i class='bx bxl-whatsapp' ></i></a>
+                </div>
+
+                <div class="home__img">
+                    <!-- <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="50" y="60" href="assets/img/Rocket Illustration.png"/>
+                        </g>
+                    </svg> -->
+                    
+                    <img class="home__blob-img" src="assets/img/Rocket Illustration.png"/>
+                      
+                </div>
+            </section>
+
+
+            <!--===== SHOWREEL =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Showreel</h2>
+        
+                <!-- <div class="skills__container bd-grid">          
+                           
+                </div> -->
+                <div class="flex justify-center">
+                    <iframe src="assets/img/2021 LG OLED l  Ink Art 4K HDR 60fps(1080P_60FPS).mp4" allowfullscreen width="1080" height="600" ></iframe>
+                </div>
+                    
+            </section>
+
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <!-- <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/about.jpg" alt="">
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">I'am Marlon</h2>
+                        <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>           
+                    </div>                                   
+                </div> -->
+
+                <div class="about flex flex-col sm:flex-row justify-center sm:space-x-10">
+                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <img class="rounded-t-lg" src="assets/img/IMG_20230823_011809_510.jpg" height="600" />
+                        
+                        <div class="p-5">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Debojyoti Saha (Founder)</h5>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">The talented founder of DS Creative and a skilled
+                                VFX student from Kolkata. With a passion for visual effects and
+                                storytelling, he weaves wonders through his creativity,
+                                mesmerizing with exceptional video editing skills. Welcome to his
+                                world of boundless creativity!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="about2 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <img class="rounded-t-lg" src="assets/img/IMG_1740.JPG" height="600"/>
+                        
+                        <div class="p-5">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Soumyadip Saha (Co-Founder)</h5>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">A talented creator from Kolkata. Skilled in video
+                                editing, videography, and photography, he's passionate about VFX
+                                and currently studying at MAAC. As the co-founder of DS
+                                Creative, his captivating ideas and stunning visual storytelling will
+                                leave you amazed!</p>
+                        </div>
+                    </div>
+                </div>
+            
+            </section>
+
+
+             <!--===== CONTACT =====-->
+             <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <div class="flex flex-col justify-center order-last sm:order-first sm:flex-row">
+
+                        <div class="text-center w-full flex flex-col">
+                          <div>
+                            <p class="font-normal text-xl text-slate-50 mb-6">
+                              Email: 
+                              <a href="mailto:dscreativeofficial2002@gmail.com"> dscreativeofficial2002@gmail.com </a>
+                            </p>
+                          </div>
+                
+                          <div>
+                            <p class="font-normal text-xl text-slate-50 mb-6">
+                              Phone no: 8420802013 / 9073120790
+                            </p>
+                          </div>
+
+                          <div class="home__social">
+                            <a href="https://instagram.com/ds_creatives_2002" class="home__social-icon"><i class='bx bxl-instagram'></i></a>
+                            <a href="https://wa.me/8420802013"" class="home__social-icon"><i class='bx bxl-whatsapp' ></i></a>
+                        </div>
+                    </div>
+                
+                </div>
+            </section>
+
+            <!--===== REVIEW =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Review</h2>
+
+                <div class="flex flex-col sm:flex-row justify-center space-x-10 mt-10">
+                    <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">            
+                        <div class="p-5">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Leave us a review!</h5>
+                            <p class="mb-3 font-normal text-slate-200 dark:text-slate-200">
+                                Thanks for your quick feedback! We'd love you to leave us a Google review from the link below. 
+                                Other people love to see what you think about us.
+                            </p>
+            
+                            <div class="flex justify-center">
+                            <div class="bg-gray-500 rounded w-44">
+                            
+                            <div class="flex justify-center"> 
+                                <a href="https://g.page/r/CduQZ65fNx5VEAI/review" class="flex flex-col">
+                                    <p class="text-center font-typoround mb-2"> Open Google reviews</p>
+                                    <button
+                                        type="button"
+                                        data-te-ripple-init
+                                        data-te-ripple-color="light"
+                                        class="mb-2 ml-10 inline-block rounded px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg w-14"
+                                        style="background-color: #ea4335">
+                                            <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-4 w-4"
+                                            fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M7 11v2.4h3.97c-.16 1.029-1.2 3.02-3.97 3.02-2.39 0-4.34-1.979-4.34-4.42 0-2.44 1.95-4.42 4.34-4.42 1.36 0 2.27.58 2.79 1.08l1.9-1.83c-1.22-1.14-2.8-1.83-4.69-1.83-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.721-2.84 6.721-6.84 0-.46-.051-.81-.111-1.16h-6.61zm0 0 17 2h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2z"
+                                                fill-rule="evenodd"
+                                                clip-rule="evenodd" />
+                                            </svg>
+                                    </button>
+                                </a>
+            
+                            </div>
+                           </div>
+                        </div>
+                            
+                        </div>
+                    </div>
+            
+                  </div>
+            
+            </section>
+
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p>Made With ❤ by Sujoy</p>
+            <!-- <p class="footer__title">Sujoy</p> -->
+            <div class="footer__social">
+                <a href="https://www.facebook.com/c0mrd/" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://www.instagram.com/c0mrd/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.linkedin.com/in/sujoy-nath-c0mrd/" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
             </div>
+            <p class="footer__copy">&#169; All rigths reserved</p>
+        </footer>
 
-            <div class="flex justify-center">
-              <p class="font-cinzel text-4xl mb-3"> DS CREATIVES</p>
-            </div>
 
-            <div>
-              <p class="hero-text-text pl-24 pr-6 font-typewritter text-xl">
-                Welcome to DS Creative, a video editing freelancing company
-                founded by Mr. Soumyadip Saha and Mr. Debojyoti Saha. 
-                We are passionate about transforming your vision into captivating visuals.
-                Let us bring your stories to life through the art of video editing.
-                Together, we will create magic!
-              </p>
-            </div>
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
 
-            <div class="flex justify-center mt-12">
-              <a href="contact.html">
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full font-typoround text-lg w-44">
-                  Contact Us
-                </button>
-              </a>
-            </div>
-
-        </div>
-
-        <div class="w-full">
-            <img class="hero-image" src="assets/Rocket Illustration.png" alt="Image Rocket" />
-        </div>
-    </div>
- 
-</body>
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
