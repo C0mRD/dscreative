@@ -18,6 +18,16 @@
       font-family: "cinzel";
       src: url(/assets/fonts/CinzelDecorative-Regular.ttf);
     }
+
+  @font-face {
+    font-family: "montserrat";
+    src: url(/assets/fonts/Montserrat-Bold.ttf);
+    }
+
+    @font-face {
+      font-family: "lato";
+      src: url(/assets/fonts/Lato-Regular.ttf);
+    }
 }
 
 
@@ -32,6 +42,7 @@
   /* HSL color mode */
   --hue-color: 224;
   --first-color: hsl(var(--hue-color), 89%, 60%);
+  --title-color: #fff;
   /* --second-color: hsl(var(--hue-color), 56%, 12%); */
   --second-color: #e3dcdc;
   --text-color: #e3dcdc;
@@ -76,7 +87,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--text-color);
-  background: url('../img/background.jpg') no-repeat center center fixed;
+  background: url('../img/bg.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -104,10 +115,11 @@ img {
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
-  color: var(--first-color);
+  color: var(--title-color);
   margin-top: var(--mb-2);
   margin-bottom: var(--mb-4);
   text-align: center;
+  font-family: typoround;
 }
 
 .section-title::after {
@@ -193,20 +205,29 @@ img {
   color: var(--first-color);
 }
 
+.logo{
+  display: none;
+}
+
+.contact-img{
+  width: 600px;
+  height: 450px;
+}
+
 @media screen and (max-width: 767px) {
   .hero-text{
     width: 360px;
     height: auto;
     margin-bottom: 15px;
     font-size: 10px;
-    margin-top: 200px;
+    margin-top: 260px;
   }
 
   .home__img {
     position: absolute;
     left: 0;
     /* bottom: 0; */
-    top: 14%;
+    top: 18%;
   }
 
   .home__blob-img{
@@ -234,6 +255,19 @@ img {
 
   .about2{
     margin-top: 10px;
+  }
+
+  .logo-lapy{
+    display: none;
+  }
+
+  .logo{
+    display: block;
+  }
+
+  .contact-img{
+    width: 350px;
+    height: 300px;
   }
 
   .nav__menu {
@@ -310,7 +344,6 @@ img {
 
 .home__title {
   font-size: var(--big-font-size);
-  margin-bottom: var(--mb-5);
 }
 
 .home__title-color {
