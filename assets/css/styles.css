@@ -149,7 +149,7 @@ img {
 
 .l-header {
   width: 100%;
-  /* position: fixed; */
+  /* position: absolute; */
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
@@ -199,6 +199,7 @@ img {
   /* margin-bottom: var(--mb-2); */
   font-size: 2rem;
   color: var(--second-color);
+  margin-right: 1.2rem;
 }
 
 .home__social-icon:hover {
@@ -263,6 +264,7 @@ img {
 
   .logo{
     display: block;
+    margin-top: 1.5rem;
   }
 
   .contact-img{
