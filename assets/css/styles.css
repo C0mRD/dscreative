@@ -149,7 +149,7 @@ img {
 
 .l-header {
   width: 100%;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
@@ -541,7 +541,7 @@ img {
   }
   .home__social-icon {
     margin-bottom: 0;
-    margin-right: 1.25px;
+    margin-right: 1.3rem;
   }
   .home__img {
     width: 300px;
